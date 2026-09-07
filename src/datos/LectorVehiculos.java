@@ -1,4 +1,5 @@
 package datos;
+import modelo.Motocicleta;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -29,6 +30,9 @@ public class LectorVehiculos {
                         precio, (int) caracteristica));
             } else if (tipo.equalsIgnoreCase("CAMIONETA")) {
                 vehiculos.add(new Camioneta(marca, modelo, anio,
+                        precio, caracteristica));
+            } else if (tipo.equalsIgnoreCase("MOTOCICLETA")) {
+                vehiculos.add(new Motocicleta(marca, modelo, anio,
                         precio, caracteristica));
             }
         }
